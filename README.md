@@ -1,6 +1,11 @@
 # WHTR
 Whiteboard Handwriting Text Recognition
 
+## Installation
+```
+pip install -r requirements.txt
+```
+
 ## Usage
 ```
 python main.py --img_file line.png
