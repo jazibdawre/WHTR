@@ -1,14 +1,15 @@
-import argparse
+import os
 import json
+import argparse
 from typing import Tuple, List
 
 import cv2
 import editdistance
 from path import Path
 
-from dataloader_iam import DataLoaderIAM, Batch
 from model import Model, DecoderType
 from preprocessor import Preprocessor
+from dataloader_iam import DataLoaderIAM, Batch
 
 
 class FilePaths:
@@ -147,6 +148,10 @@ def infer(model: Model, fn_img: Path) -> None:
 
     batch = Batch([img], None, 1)
     recognized, probability = model.infer_batch(batch, True)
+
+    with open((os.path.splitext(fn_img)[0] + ".txt"), "w") as f:
+        f.writelines(recognized)
+
     print(f'Recognized: "{recognized[0]}"')
     print(f"Probability: {probability[0]}")
 
