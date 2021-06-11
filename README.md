@@ -3,6 +3,6 @@ Whiteboard Handwriting Text Recognition
 
 ## Usage
 ```
-python main.py --img_file ../data/line.png
+python main.py --img_file line.png
 ```
-replace ../data/line.png with path to image file
+replace line.png with name of image file. Keep the image file in `images/` directory
