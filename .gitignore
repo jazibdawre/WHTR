@@ -3,5 +3,7 @@ __pycache__/
 *.so
 *.pyc
 .idea/
+.vscode/
+
+images/
 dump/
-.vscode
