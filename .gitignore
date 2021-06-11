@@ -1,8 +1,7 @@
-data/words*
-data/words.txt
-src/__pycache__/
-notes/
+__pycache__/
+
 *.so
 *.pyc
 .idea/
 dump/
+.vscode
